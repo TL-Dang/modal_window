@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Courier;
     color: #333;
     line-height: 1.5;
     height: 100vh;
@@ -18,7 +18,7 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background: linear-gradient(to top left, #fc0fc0, #c54b8c);
+    background: linear-gradient(to top left, #fc0fc0, #b57281);
 }
 
 .show-modal {
@@ -52,6 +52,10 @@ h1 {
 p {
     font-size: 1.8rem;
 }
+
+.hidden {
+    display: none;
+  }
 
 .modal {
     position: absolute;
