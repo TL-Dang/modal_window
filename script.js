@@ -6,7 +6,6 @@ const btnCloseModal = document.querySelector('.close-modal');
 const btnsOpenModal = document.querySelectorAll('.show-modal');
 
 const openModal = function () {
-  console.log('Btn Clicked');
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
@@ -24,3 +23,13 @@ const closeModal = function () {
 //Hides modal on html button click
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+//'e' stands for 'event', any vaiable can be used
+document.addEventListener('keyup', function (e) {
+  console.log(e.key);
+
+  //adds 'hidden' class back on keyup 'Escape'
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
